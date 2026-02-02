@@ -20,16 +20,6 @@ jobs:
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
-        with:
-          languages: javascript-typescript
-          config: |
-            disable-default-queries: true
-            threat-models: local
-            queries:
-              - uses: security-extended
-            query-filters:
-              - exclude:
-                  tags: /cwe-020/
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
